@@ -1,5 +1,5 @@
-defmodule PetalBoilerplateWeb.ErrorView do
-  use PetalBoilerplateWeb, :view
+defmodule RealTimeWeb.ErrorView do
+  use RealTimeWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

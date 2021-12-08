@@ -12,8 +12,8 @@ then
     exit 1
 fi
 
-CURRENT_NAME="PetalBoilerplate"
-CURRENT_OTP="petal_boilerplate"
+CURRENT_NAME="RealTime"
+CURRENT_OTP="real_time"
 
 # TODO: MODIFY THESE TWO VARIABLES BEFORE RUNNING THE SCRIPT
 NEW_NAME="YourAppName"
@@ -27,7 +27,7 @@ git mv lib/$CURRENT_OTP.ex lib/$NEW_OTP.ex
 git mv lib/${CURRENT_OTP}_web lib/${NEW_OTP}_web
 git mv lib/${CURRENT_OTP}_web.ex lib/${NEW_OTP}_web.ex
 
-# Uncomment this if you have written tests in the folder test/petal_boilerplate
+# Uncomment this if you have written tests in the folder test/real_time
 # git mv test/$CURRENT_OTP test/$NEW_OTP
 
 git mv test/${CURRENT_OTP}_web test/${NEW_OTP}_web

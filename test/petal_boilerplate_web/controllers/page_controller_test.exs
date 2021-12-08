@@ -1,5 +1,5 @@
-defmodule PetalBoilerplateWeb.PageControllerTest do
-  use PetalBoilerplateWeb.ConnCase
+defmodule RealTimeWeb.PageControllerTest do
+  use RealTimeWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

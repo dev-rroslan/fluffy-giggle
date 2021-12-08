@@ -1,12 +1,12 @@
-defmodule PetalBoilerplateWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :petal_boilerplate
+defmodule RealTimeWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :real_time
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_petal_boilerplate_key",
+    key: "_real_time_key",
     signing_salt: "S+qhbMV3"
   ]
 
@@ -18,7 +18,7 @@ defmodule PetalBoilerplateWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :petal_boilerplate,
+    from: :real_time,
     gzip: false,
     only: ~w(assets fonts images favicon.ico robots.txt)
 
@@ -28,7 +28,7 @@ defmodule PetalBoilerplateWeb.Endpoint do
     socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :petal_boilerplate
+    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :real_time
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,
@@ -46,5 +46,5 @@ defmodule PetalBoilerplateWeb.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
   plug Plug.Session, @session_options
-  plug PetalBoilerplateWeb.Router
+  plug RealTimeWeb.Router
 end

@@ -1,3 +1,3 @@
-defmodule PetalBoilerplateWeb.PageViewTest do
-  use PetalBoilerplateWeb.ConnCase, async: true
+defmodule RealTimeWeb.PageViewTest do
+  use RealTimeWeb.ConnCase, async: true
 end

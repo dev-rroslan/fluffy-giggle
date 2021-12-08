@@ -1,12 +1,12 @@
-defmodule PetalBoilerplateWeb do
+defmodule RealTimeWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use PetalBoilerplateWeb, :controller
-      use PetalBoilerplateWeb, :view
+      use RealTimeWeb, :controller
+      use RealTimeWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule PetalBoilerplateWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: PetalBoilerplateWeb
+      use Phoenix.Controller, namespace: RealTimeWeb
 
       import Plug.Conn
-      import PetalBoilerplateWeb.Gettext
-      alias PetalBoilerplateWeb.Router.Helpers, as: Routes
+      import RealTimeWeb.Gettext
+      alias RealTimeWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/petal_boilerplate_web/templates",
-        namespace: PetalBoilerplateWeb
+        root: "lib/real_time_web/templates",
+        namespace: RealTimeWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule PetalBoilerplateWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {PetalBoilerplateWeb.LayoutView, "live.html"}
+        layout: {RealTimeWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -72,7 +72,7 @@ defmodule PetalBoilerplateWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import PetalBoilerplateWeb.Gettext
+      import RealTimeWeb.Gettext
     end
   end
 
@@ -87,9 +87,9 @@ defmodule PetalBoilerplateWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import PetalBoilerplateWeb.ErrorHelpers
-      import PetalBoilerplateWeb.Gettext
-      alias PetalBoilerplateWeb.Router.Helpers, as: Routes
+      import RealTimeWeb.ErrorHelpers
+      import RealTimeWeb.Gettext
+      alias RealTimeWeb.Router.Helpers, as: Routes
 
       use PetalComponents
     end
